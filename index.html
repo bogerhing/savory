@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savory — Inspiring Every Lunch and Dinner</title>
+  <meta name="description" content="Savory is a premium recipe platform featuring curated lunch and dinner recipes for every day of the week.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+
+  <!-- ─── Navbar ─── -->
+  <nav id="navbar" class="transparent">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-name">Savory</span>
+        <span class="logo-tag">Inspiring Every Lunch and Dinner</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── SECTION 1: Hero ─── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-label">Premium Recipe Platform</p>
+      <h1>Make Every Meal <em>Memorable</em></h1>
+      <p class="hero-sub">Discover flavorful lunch and dinner recipes for every day of the week.</p>
+      <div class="hero-actions">
+        <a href="recipes.html" class="btn btn-primary" id="heroCTA">Explore Recipes</a>
+        <a href="about.html" class="btn btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 2: Featured Recipes ─── -->
+  <section id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Chef's Selection</span>
+        <h2 class="section-title">Featured Recipes</h2>
+        <p class="section-sub">Handpicked favorites that have earned a permanent spot at the table.</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="featured-grid" id="featuredGrid">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 3: Browse By Category ─── -->
+  <section id="categories">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Explore More</span>
+        <h2 class="section-title">Browse By Category</h2>
+        <p class="section-sub">From speedy weekday lunches to slow Sunday dinners — find what fits your table.</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="category-grid">
+        <a href="lunch.html" class="category-card reveal">
+          <img src="https://images.unsplash.com/photo-1540914124281-342587941389?w=700&auto=format&fit=crop" alt="Quick Lunches" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-label"><em>Browse</em><span>Quick Lunches</span></div>
+        </a>
+        <a href="dinner.html" class="category-card reveal">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&auto=format&fit=crop" alt="Family Dinners" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-label"><em>Browse</em><span>Family Dinners</span></div>
+        </a>
+        <a href="recipes.html" class="category-card reveal">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=700&auto=format&fit=crop" alt="Healthy Meals" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-label"><em>Browse</em><span>Healthy Meals</span></div>
+        </a>
+        <a href="dinner.html" class="category-card reveal">
+          <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=700&auto=format&fit=crop" alt="Comfort Food" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-label"><em>Browse</em><span>Comfort Food</span></div>
+        </a>
+        <a href="recipes.html" class="category-card reveal">
+          <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=700&auto=format&fit=crop" alt="Vegetarian" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-label"><em>Browse</em><span>Vegetarian</span></div>
+        </a>
+        <a href="recipes.html" class="category-card reveal">
+          <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c3?w=700&auto=format&fit=crop" alt="High Protein" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-label"><em>Browse</em><span>High Protein</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 4: Chef's Picks ─── -->
+  <section id="chefs-picks">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">This Week</span>
+        <h2 class="section-title">Chef's Picks</h2>
+        <p class="section-sub">Our editors' most-loved recipes right now.</p>
+        <div class="section-divider" style="background:var(--terra-light)"></div>
+      </div>
+      <div class="picks-layout">
+        <div class="picks-featured reveal" onclick="openModal(9)">
+          <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=900&auto=format&fit=crop" alt="Mushroom Risotto">
+          <div class="picks-featured-overlay"></div>
+          <div class="picks-featured-content">
+            <span class="section-label">Dinner Pick</span>
+            <h3>Mushroom Risotto</h3>
+            <p>Deeply savory, luxuriously creamy wild mushroom risotto finished with Parmigiano-Reggiano and fresh thyme.</p>
+            <span class="btn btn-ghost" style="display:inline-flex">View Recipe →</span>
+          </div>
+        </div>
+        <div class="picks-sidebar">
+          <div class="pick-item reveal" onclick="openModal(5)">
+            <div class="pick-item-img">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&auto=format&fit=crop" alt="Chickpea Bowl">
+            </div>
+            <div class="pick-item-body">
+              <span class="section-label">Lunch Pick</span>
+              <h4>Mediterranean Chickpea Bowl</h4>
+              <div class="card-meta">
+                <span>⏱ 15 min</span>
+                <span>🍳 10 min</span>
+              </div>
+            </div>
+          </div>
+          <div class="pick-item reveal" onclick="openModal(3)">
+            <div class="pick-item-img">
+              <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=300&auto=format&fit=crop" alt="Salmon">
+            </div>
+            <div class="pick-item-body">
+              <span class="section-label">Dinner Pick</span>
+              <h4>Pan-Seared Salmon with Dill</h4>
+              <div class="card-meta">
+                <span>⏱ 10 min</span>
+                <span>🍳 12 min</span>
+              </div>
+            </div>
+          </div>
+          <div class="pick-item reveal" onclick="openModal(11)">
+            <div class="pick-item-img">
+              <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300&auto=format&fit=crop" alt="Shrimp Tacos">
+            </div>
+            <div class="pick-item-body">
+              <span class="section-label">Lunch Pick</span>
+              <h4>Shrimp Tacos with Mango Salsa</h4>
+              <div class="card-meta">
+                <span>⏱ 20 min</span>
+                <span>🍳 8 min</span>
+              </div>
+            </div>
+          </div>
+          <div class="pick-item reveal" onclick="openModal(7)">
+            <div class="pick-item-img">
+              <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=300&auto=format&fit=crop" alt="Thai Beef">
+            </div>
+            <div class="pick-item-body">
+              <span class="section-label">Dinner Pick</span>
+              <h4>Spicy Thai Basil Beef</h4>
+              <div class="card-meta">
+                <span>⏱ 12 min</span>
+                <span>🍳 10 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 5: Weekly Meal Inspiration ─── -->
+  <section id="meal-inspiration">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Plan Ahead</span>
+        <h2 class="section-title">Weekly Meal Inspiration</h2>
+        <p class="section-sub">A beautiful week of meals — from Monday's light lunch to Sunday's slow dinner.</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="inspiration-grid">
+        <div class="day-card reveal" onclick="openModal(5)">
+          <div class="day-card-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&auto=format&fit=crop" alt="Monday" loading="lazy"></div>
+          <div class="day-card-body"><p class="day-name">Monday</p><p class="day-recipe">Chickpea Bowl</p></div>
+        </div>
+        <div class="day-card reveal" onclick="openModal(1)">
+          <div class="day-card-img"><img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c3?w=200&auto=format&fit=crop" alt="Tuesday" loading="lazy"></div>
+          <div class="day-card-body"><p class="day-name">Tuesday</p><p class="day-recipe">Herb Chicken</p></div>
+        </div>
+        <div class="day-card reveal" onclick="openModal(8)">
+          <div class="day-card-img"><img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=200&auto=format&fit=crop" alt="Wednesday" loading="lazy"></div>
+          <div class="day-card-body"><p class="day-name">Wednesday</p><p class="day-recipe">Tomato Bisque</p></div>
+        </div>
+        <div class="day-card reveal" onclick="openModal(2)">
+          <div class="day-card-img"><img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=200&auto=format&fit=crop" alt="Thursday" loading="lazy"></div>
+          <div class="day-card-body"><p class="day-name">Thursday</p><p class="day-recipe">Cacio e Pepe</p></div>
+        </div>
+        <div class="day-card reveal" onclick="openModal(11)">
+          <div class="day-card-img"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200&auto=format&fit=crop" alt="Friday" loading="lazy"></div>
+          <div class="day-card-body"><p class="day-name">Friday</p><p class="day-recipe">Shrimp Tacos</p></div>
+        </div>
+        <div class="day-card reveal" onclick="openModal(10)">
+          <div class="day-card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=200&auto=format&fit=crop" alt="Saturday" loading="lazy"></div>
+          <div class="day-card-body"><p class="day-name">Saturday</p><p class="day-recipe">Lamb Chops</p></div>
+        </div>
+        <div class="day-card reveal" onclick="openModal(13)">
+          <div class="day-card-img"><img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=200&auto=format&fit=crop" alt="Sunday" loading="lazy"></div>
+          <div class="day-card-body"><p class="day-name">Sunday</p><p class="day-recipe">Beef Stew</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 6: Popular Recipes ─── -->
+  <section id="popular">
+    <div class="container">
+      <div class="section-header reveal" style="flex-direction:row;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <span class="section-label">Trending Now</span>
+          <h2 class="section-title">Popular Recipes</h2>
+          <div class="section-divider" style="margin-top:0.6rem"></div>
+        </div>
+        <a href="recipes.html" class="btn btn-outline">View All Recipes</a>
+      </div>
+      <div class="popular-grid" id="popularGrid">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 7: Cooking Tips ─── -->
+  <section id="tips">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Kitchen Wisdom</span>
+        <h2 class="section-title">Cooking Tips</h2>
+        <p class="section-sub">Smart techniques to elevate every meal you make.</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card reveal">
+          <div class="tip-icon">📋</div>
+          <h4>Meal Prep Mastery</h4>
+          <p>Batch-cook grains, proteins, and roasted vegetables on Sundays. Store in separate containers and mix-and-match throughout the week to create four distinct meals with minimal effort.</p>
+        </div>
+        <div class="tip-card reveal">
+          <div class="tip-icon">🥗</div>
+          <h4>Healthy Ingredient Swaps</h4>
+          <p>Replace heavy cream with coconut milk in soups. Use Greek yogurt instead of sour cream in dressings. Swap refined pasta for legume-based noodles — same comfort, more nutrition.</p>
+        </div>
+        <div class="tip-card reveal">
+          <div class="tip-icon">🔪</div>
+          <h4>Kitchen Essentials</h4>
+          <p>A sharp chef's knife, a cast iron skillet, and quality kosher salt are the holy trinity of a great kitchen. Invest in these three things before anything else.</p>
+        </div>
+        <div class="tip-card reveal">
+          <div class="tip-icon">⚡</div>
+          <h4>Quick Cooking Hacks</h4>
+          <p>Salt your pasta water generously — it should taste like the sea. Always rest your proteins after cooking. Brown your onions low and slow; they take 20 minutes, not five.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 8: Newsletter ─── -->
+  <section id="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-copy reveal">
+          <span class="section-label">Stay Inspired</span>
+          <h2 class="section-title" style="color:#fff">Weekly Recipes in Your Inbox</h2>
+          <p class="section-sub" style="color:rgba(255,255,255,0.6); margin-top:0.75rem">Join over 40,000 home cooks getting seasonal recipes, cooking tips, and meal ideas every Tuesday morning.</p>
+        </div>
+        <div class="reveal" style="transition-delay:0.1s">
+          <form class="newsletter-form" onsubmit="return false">
+            <input type="text" placeholder="Your first name" autocomplete="given-name">
+            <input type="email" placeholder="Your email address" required autocomplete="email">
+            <button type="submit" class="btn btn-primary" style="width:fit-content">Subscribe — It's Free</button>
+            <p class="newsletter-note">By subscribing, you agree to our <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline">Privacy Policy</a>. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-name">Savory</span>
+          <span class="logo-tag">Inspiring Every Lunch and Dinner</span>
+          <p>A premium recipe platform celebrating the art of the everyday meal. From quick weekday lunches to special weekend dinners.</p>
+          <div class="footer-social">
+            <a href="about.html" aria-label="Follow us">𝕏</a>
+            <a href="about.html" aria-label="Instagram">📷</a>
+            <a href="about.html" aria-label="Pinterest">📌</a>
+            <a href="about.html" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">All Recipes</a></li>
+            <li><a href="lunch.html">Lunch</a></li>
+            <li><a href="dinner.html">Dinner</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Recipe Categories</h5>
+          <ul>
+            <li><a href="lunch.html">Quick Lunches</a></li>
+            <li><a href="dinner.html">Family Dinners</a></li>
+            <li><a href="recipes.html">Vegetarian</a></li>
+            <li><a href="recipes.html">High Protein</a></li>
+            <li><a href="recipes.html">Comfort Food</a></li>
+            <li><a href="recipes.html">Healthy Meals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Get in Touch</h5>
+          <div class="footer-contact">
+            <div class="footer-contact-item"><span>📍</span><span>Seattle, Washington, USA</span></div>
+            <div class="footer-contact-item"><span>📞</span><span>+1 (206) 555-3718</span></div>
+            <div class="footer-contact-item"><span>✉️</span><span>hello@savorytable.com</span></div>
+          </div>
+          <h5 style="margin-top:1.5rem">Newsletter</h5>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Your email address">
+            <button class="btn btn-primary" style="font-size:0.75rem;padding:0.6rem 1.4rem">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Savory. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── Recipe Modal ─── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-hero">
+        <img id="modalImage" src="" alt="">
+        <div class="modal-hero-overlay"></div>
+        <div class="modal-hero-content">
+          <h2 id="modalTitle"></h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitleMain" style="font-size:1.5rem;margin-bottom:1rem;display:none"></h2>
+        <div class="modal-stats">
+          <div class="modal-stat"><label>Prep Time</label><span id="modalPrepTime"></span></div>
+          <div class="modal-stat"><label>Cook Time</label><span id="modalCookTime"></span></div>
+          <div class="modal-stat"><label>Yield</label><span id="modalServings"></span></div>
+          <div class="modal-stat"><label>Difficulty</label><span id="modalDifficulty"></span></div>
+        </div>
+        <div class="modal-sections">
+          <div class="modal-ingredients">
+            <h3>Ingredients</h3>
+            <ul id="modalIngredients"></ul>
+          </div>
+          <div class="modal-instructions">
+            <h3>Instructions</h3>
+            <ol id="modalSteps"></ol>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <a href="recipes.html" class="btn btn-primary" id="modalViewBtn">View Full Recipe</a>
+          <button class="btn btn-outline" id="modalSaveBtn">♡ Save Recipe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Save Popup ─── -->
+  <div class="popup-overlay" id="savePopup">
+    <div class="popup-box">
+      <div class="popup-icon">🔖</div>
+      <h3>Recipe Saving Coming Soon</h3>
+      <p>Recipe saving is currently unavailable. Check back soon — we're building your personal cookbook!</p>
+      <button class="btn btn-primary" id="savePopupClose" onclick="closeSavePopup()">Got It</button>
+    </div>
+  </div>
+
+  <!-- ─── Toast ─── -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span class="toast-msg"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

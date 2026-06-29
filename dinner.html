@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinner Recipes — Savory</title>
+  <meta name="description" content="Explore elegant and hearty dinner recipes at Savory. From weeknight favorites to special occasion showstoppers.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dinner-page">
+
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-name">Savory</span>
+        <span class="logo-tag">Inspiring Every Lunch and Dinner</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html" class="active">Dinner</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600&auto=format&fit=crop')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="section-label" style="color:var(--terra-light)">Evening Meals</span>
+      <h1>Dinner Recipes</h1>
+      <p>From quick weeknight dinners to slow, special Sunday suppers.</p>
+    </div>
+  </div>
+
+  <!-- Category Highlights -->
+  <div style="background:var(--cream);padding:3rem 0;border-bottom:1px solid var(--cream-dark)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem">
+        <a href="dinner.html" style="display:flex;align-items:center;gap:0.85rem;background:#fff;border-radius:8px;padding:1.2rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+          <div style="font-size:1.6rem">🐔</div>
+          <div>
+            <p style="font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--charcoal)">Chicken</p>
+            <p style="font-size:0.75rem;color:var(--charcoal-light)">2 recipes</p>
+          </div>
+        </a>
+        <a href="dinner.html" style="display:flex;align-items:center;gap:0.85rem;background:#fff;border-radius:8px;padding:1.2rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+          <div style="font-size:1.6rem">🐟</div>
+          <div>
+            <p style="font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--charcoal)">Seafood</p>
+            <p style="font-size:0.75rem;color:var(--charcoal-light)">3 recipes</p>
+          </div>
+        </a>
+        <a href="dinner.html" style="display:flex;align-items:center;gap:0.85rem;background:#fff;border-radius:8px;padding:1.2rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+          <div style="font-size:1.6rem">🍝</div>
+          <div>
+            <p style="font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--charcoal)">Pasta</p>
+            <p style="font-size:0.75rem;color:var(--charcoal-light)">2 recipes</p>
+          </div>
+        </a>
+        <a href="dinner.html" style="display:flex;align-items:center;gap:0.85rem;background:#fff;border-radius:8px;padding:1.2rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+          <div style="font-size:1.6rem">🥩</div>
+          <div>
+            <p style="font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--charcoal)">Beef & Lamb</p>
+            <p style="font-size:0.75rem;color:var(--charcoal-light)">3 recipes</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding:4rem 0">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:2.5rem">
+        <span class="section-label">Evening Inspiration</span>
+        <h2 class="section-title">Dinner Recipes</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="recipes-main-grid" id="categoryPageGrid"></div>
+    </div>
+  </section>
+
+  <!-- Feature Banner -->
+  <div style="background:var(--charcoal);padding:5rem 0">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+      <div style="border-radius:8px;overflow:hidden;aspect-ratio:4/3">
+        <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&auto=format&fit=crop" alt="Risotto" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div>
+        <span class="section-label" style="color:var(--terra-light)">Cooking Philosophy</span>
+        <h3 style="font-family:var(--font-display);font-size:2rem;color:#fff;margin:0.75rem 0 1.2rem;line-height:1.2">The Art of the Evening Meal</h3>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;line-height:1.8;margin-bottom:1rem">Dinner is where the day slows down and gathering becomes ritual. Our dinner recipes honor that — whether you have 20 minutes or two hours, every recipe is worth sitting down for.</p>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;line-height:1.8;margin-bottom:1.8rem">We believe the best meals tell a story. A proper sear, a slow braise, a glaze that caramelizes at the edges — these are the small things that turn dinner into something memorable.</p>
+        <a href="recipes.html" class="btn btn-ghost">Explore All Recipes</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-copy reveal">
+          <span class="section-label">Stay Inspired</span>
+          <h2 class="section-title" style="color:#fff">Dinner Ideas, Weekly</h2>
+          <p class="section-sub" style="color:rgba(255,255,255,0.6);margin-top:0.75rem">Get seasonal dinner recipes delivered every Tuesday morning.</p>
+        </div>
+        <div class="reveal">
+          <form class="newsletter-form" onsubmit="return false">
+            <input type="text" placeholder="Your first name">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary" style="width:fit-content">Subscribe</button>
+            <p class="newsletter-note">We respect your privacy. <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline">Privacy Policy</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-name">Savory</span>
+          <span class="logo-tag">Inspiring Every Lunch and Dinner</span>
+          <p>A premium recipe platform celebrating the art of the everyday meal.</p>
+          <div class="footer-social">
+            <a href="about.html">𝕏</a><a href="about.html">📷</a><a href="about.html">📌</a><a href="about.html">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">All Recipes</a></li>
+            <li><a href="lunch.html">Lunch</a></li>
+            <li><a href="dinner.html">Dinner</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="lunch.html">Quick Lunches</a></li>
+            <li><a href="dinner.html">Family Dinners</a></li>
+            <li><a href="recipes.html">Vegetarian</a></li>
+            <li><a href="recipes.html">Healthy Meals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact">
+            <div class="footer-contact-item"><span>📍</span><span>Seattle, Washington, USA</span></div>
+            <div class="footer-contact-item"><span>📞</span><span>+1 (206) 555-3718</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Savory. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-hero">
+        <img id="modalImage" src="" alt="">
+        <div class="modal-hero-overlay"></div>
+        <div class="modal-hero-content"><h2 id="modalTitle"></h2></div>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitleMain" style="display:none"></h2>
+        <div class="modal-stats">
+          <div class="modal-stat"><label>Prep Time</label><span id="modalPrepTime"></span></div>
+          <div class="modal-stat"><label>Cook Time</label><span id="modalCookTime"></span></div>
+          <div class="modal-stat"><label>Yield</label><span id="modalServings"></span></div>
+          <div class="modal-stat"><label>Difficulty</label><span id="modalDifficulty"></span></div>
+        </div>
+        <div class="modal-sections">
+          <div class="modal-ingredients"><h3>Ingredients</h3><ul id="modalIngredients"></ul></div>
+          <div class="modal-instructions"><h3>Instructions</h3><ol id="modalSteps"></ol></div>
+        </div>
+        <div class="modal-actions">
+          <a href="dinner.html" class="btn btn-primary" id="modalViewBtn">View Full Recipe</a>
+          <button class="btn btn-outline" id="modalSaveBtn">♡ Save Recipe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="savePopup">
+    <div class="popup-box">
+      <div class="popup-icon">🔖</div>
+      <h3>Recipe Saving Coming Soon</h3>
+      <p>Recipe saving is currently unavailable. Check back soon!</p>
+      <button class="btn btn-primary" id="savePopupClose" onclick="closeSavePopup()">Got It</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"><span class="toast-icon">✓</span><span class="toast-msg"></span></div>
+  <script src="script.js"></script>
+</body>
+</html>

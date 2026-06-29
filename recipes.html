@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Recipes — Savory</title>
+  <meta name="description" content="Browse all lunch and dinner recipes at Savory. Filter by category to find your perfect meal.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── Navbar ─── -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-name">Savory</span>
+        <span class="logo-tag">Inspiring Every Lunch and Dinner</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="recipes.html" class="active">Recipes</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── Page Hero ─── -->
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&auto=format&fit=crop')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="section-label" style="color:var(--terra-light)">The Full Collection</span>
+      <h1>All Recipes</h1>
+      <p>16 curated lunch and dinner recipes for every occasion.</p>
+    </div>
+  </div>
+
+  <!-- ─── Filter Bar ─── -->
+  <div class="recipes-filter">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Recipes</button>
+        <button class="filter-tab" data-filter="lunch">Lunch</button>
+        <button class="filter-tab" data-filter="dinner">Dinner</button>
+        <button class="filter-tab" data-filter="vegetarian">Vegetarian</button>
+        <button class="filter-tab" data-filter="chicken">Chicken</button>
+        <button class="filter-tab" data-filter="seafood">Seafood</button>
+        <button class="filter-tab" data-filter="pasta">Pasta</button>
+        <button class="filter-tab" data-filter="quick">Quick &amp; Easy</button>
+        <button class="filter-tab" data-filter="healthy">Healthy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Recipes Grid ─── -->
+  <div class="recipes-section">
+    <div class="container">
+      <div class="recipes-main-grid" id="recipesPageGrid">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Newsletter ─── -->
+  <section id="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-copy reveal">
+          <span class="section-label">Stay Inspired</span>
+          <h2 class="section-title" style="color:#fff">New Recipes Every Week</h2>
+          <p class="section-sub" style="color:rgba(255,255,255,0.6);margin-top:0.75rem">Get fresh recipes delivered to your inbox every Tuesday morning.</p>
+        </div>
+        <div class="reveal">
+          <form class="newsletter-form" onsubmit="return false">
+            <input type="text" placeholder="Your first name">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary" style="width:fit-content">Subscribe — It's Free</button>
+            <p class="newsletter-note">By subscribing, you agree to our <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline">Privacy Policy</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-name">Savory</span>
+          <span class="logo-tag">Inspiring Every Lunch and Dinner</span>
+          <p>A premium recipe platform celebrating the art of the everyday meal.</p>
+          <div class="footer-social">
+            <a href="about.html">𝕏</a>
+            <a href="about.html">📷</a>
+            <a href="about.html">📌</a>
+            <a href="about.html">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">All Recipes</a></li>
+            <li><a href="lunch.html">Lunch</a></li>
+            <li><a href="dinner.html">Dinner</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="lunch.html">Quick Lunches</a></li>
+            <li><a href="dinner.html">Family Dinners</a></li>
+            <li><a href="recipes.html">Vegetarian</a></li>
+            <li><a href="recipes.html">Healthy Meals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact">
+            <div class="footer-contact-item"><span>📍</span><span>Seattle, Washington, USA</span></div>
+            <div class="footer-contact-item"><span>📞</span><span>+1 (206) 555-3718</span></div>
+            <div class="footer-contact-item"><span>✉️</span><span>hello@savorytable.com</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Savory. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── Recipe Modal ─── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-hero">
+        <img id="modalImage" src="" alt="">
+        <div class="modal-hero-overlay"></div>
+        <div class="modal-hero-content"><h2 id="modalTitle"></h2></div>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitleMain" style="display:none"></h2>
+        <div class="modal-stats">
+          <div class="modal-stat"><label>Prep Time</label><span id="modalPrepTime"></span></div>
+          <div class="modal-stat"><label>Cook Time</label><span id="modalCookTime"></span></div>
+          <div class="modal-stat"><label>Yield</label><span id="modalServings"></span></div>
+          <div class="modal-stat"><label>Difficulty</label><span id="modalDifficulty"></span></div>
+        </div>
+        <div class="modal-sections">
+          <div class="modal-ingredients"><h3>Ingredients</h3><ul id="modalIngredients"></ul></div>
+          <div class="modal-instructions"><h3>Instructions</h3><ol id="modalSteps"></ol></div>
+        </div>
+        <div class="modal-actions">
+          <a href="recipes.html" class="btn btn-primary" id="modalViewBtn">View Full Recipe</a>
+          <button class="btn btn-outline" id="modalSaveBtn">♡ Save Recipe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Save Popup ─── -->
+  <div class="popup-overlay" id="savePopup">
+    <div class="popup-box">
+      <div class="popup-icon">🔖</div>
+      <h3>Recipe Saving Coming Soon</h3>
+      <p>Recipe saving is currently unavailable. Check back soon!</p>
+      <button class="btn btn-primary" id="savePopupClose" onclick="closeSavePopup()">Got It</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"><span class="toast-icon">✓</span><span class="toast-msg"></span></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

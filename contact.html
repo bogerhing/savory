@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Savory</title>
+  <meta name="description" content="Get in touch with the Savory team in Seattle, Washington. We'd love to hear from you.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-name">Savory</span>
+        <span class="logo-tag">Inspiring Every Lunch and Dinner</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active nav-cta">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div style="background:var(--cream);padding:5rem 0 3rem;border-bottom:1px solid var(--cream-dark)">
+    <div class="container" style="text-align:center">
+      <span class="section-label">We'd Love to Hear From You</span>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);margin:0.6rem 0 1rem">Get in Touch</h1>
+      <p style="font-family:var(--font-serif);font-style:italic;font-size:1.2rem;color:var(--charcoal-light);max-width:500px;margin:0 auto">Questions, recipe requests, collaborations — our door is always open.</p>
+    </div>
+  </div>
+
+  <!-- Contact Layout -->
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="contact-info-card reveal">
+          <h3>Savory HQ</h3>
+          <p>Based in the Pacific Northwest, cooking and writing year-round.</p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <label>Address</label>
+              <span>Seattle, Washington 98101, USA</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <label>Phone</label>
+              <span>+1 (206) 555-3718</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div class="contact-detail-text">
+              <label>Email</label>
+              <span>hello@savorytable.com</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div class="contact-detail-text">
+              <label>Response Time</label>
+              <span>Within 1–2 business days</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem;background:var(--cream);border-radius:8px;padding:1.8rem;border:1px solid var(--cream-dark)" class="reveal">
+          <h4 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin-bottom:1rem;color:var(--charcoal)">Follow Along</h4>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <a href="about.html" style="display:flex;align-items:center;gap:0.75rem;color:var(--charcoal-mid);font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--terracotta)'" onmouseout="this.style.color='var(--charcoal-mid)'">
+              <span style="font-size:1.1rem">𝕏</span> @savorytable
+            </a>
+            <a href="about.html" style="display:flex;align-items:center;gap:0.75rem;color:var(--charcoal-mid);font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--terracotta)'" onmouseout="this.style.color='var(--charcoal-mid)'">
+              <span style="font-size:1.1rem">📷</span> @savorytable
+            </a>
+            <a href="about.html" style="display:flex;align-items:center;gap:0.75rem;color:var(--charcoal-mid);font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--terracotta)'" onmouseout="this.style.color='var(--charcoal-mid)'">
+              <span style="font-size:1.1rem">📌</span> Savory
+            </a>
+            <a href="about.html" style="display:flex;align-items:center;gap:0.75rem;color:var(--charcoal-mid);font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--terracotta)'" onmouseout="this.style.color='var(--charcoal-mid)'">
+              <span style="font-size:1.1rem">▶</span> Savory Kitchen
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-box reveal">
+        <h3>Send Us a Message</h3>
+        <p>Whether it's a recipe question, a collaboration inquiry, or just to say hello — we read every message.</p>
+        <form id="contactForm" onsubmit="return false">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="Emma" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Chen">
+            </div>
+            <div class="form-group form-full">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="emma@example.com" required>
+            </div>
+            <div class="form-group form-full">
+              <label for="subject">Subject</label>
+              <select id="subject">
+                <option value="">Select a topic…</option>
+                <option>Recipe Question</option>
+                <option>Collaboration Inquiry</option>
+                <option>Press & Media</option>
+                <option>Technical Issue</option>
+                <option>General Feedback</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group form-full">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell us what's on your mind…" rows="5" required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="background:var(--cream);padding:5rem 0">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:2.5rem">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">FAQ</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div class="tip-card reveal">
+          <h4>Can I submit my own recipe?</h4>
+          <p>We love hearing from our community! While we don't publish reader recipes directly, your ideas often inspire our editorial calendar. Send us your suggestions via the contact form.</p>
+        </div>
+        <div class="tip-card reveal">
+          <h4>How do I save a recipe?</h4>
+          <p>Recipe saving is coming soon! In the meantime, you can bookmark any page in your browser, or sign up for our newsletter to get our curated weekly picks delivered to you.</p>
+        </div>
+        <div class="tip-card reveal">
+          <h4>Are you open to partnerships?</h4>
+          <p>Yes — we work with select kitchen brands, food producers, and culinary organizations whose values align with ours. Please use the contact form with "Collaboration Inquiry" as the subject.</p>
+        </div>
+        <div class="tip-card reveal">
+          <h4>Can I use your recipes commercially?</h4>
+          <p>Our recipes are for personal use. Commercial use, republication, or adaptation requires written permission. Please review our <a href="terms.html" style="color:var(--terracotta)">Terms of Use</a> or contact us directly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-name">Savory</span>
+          <span class="logo-tag">Inspiring Every Lunch and Dinner</span>
+          <p>A premium recipe platform celebrating the art of the everyday meal.</p>
+          <div class="footer-social">
+            <a href="about.html">𝕏</a><a href="about.html">📷</a><a href="about.html">📌</a><a href="about.html">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">All Recipes</a></li>
+            <li><a href="lunch.html">Lunch</a></li>
+            <li><a href="dinner.html">Dinner</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="lunch.html">Quick Lunches</a></li>
+            <li><a href="dinner.html">Family Dinners</a></li>
+            <li><a href="recipes.html">Vegetarian</a></li>
+            <li><a href="recipes.html">Healthy Meals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact">
+            <div class="footer-contact-item"><span>📍</span><span>Seattle, Washington, USA</span></div>
+            <div class="footer-contact-item"><span>📞</span><span>+1 (206) 555-3718</span></div>
+            <div class="footer-contact-item"><span>✉️</span><span>hello@savorytable.com</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Savory. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"><span class="toast-icon">✓</span><span class="toast-msg"></span></div>
+  <script src="script.js"></script>
+</body>
+</html>
