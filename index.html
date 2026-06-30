@@ -417,6 +417,29 @@
   </div>
 
   <script src="script.js"></script>
+  <div id="cookieModalBox" class="cookie-modal-box">
+        <div id="cookieBackdrop" class="cookie-backdrop"></div>
+        <div id="cookieModal" class="cookie-modal">
+            <div class="cookie-card">
+                <button id="cookieClose" class="close-btn">
+                    <svg viewBox="0 0 15 15" width="24" height="24">
+                        <path d="M11.78 4.03a.75.75 0 0 0-1.06-1.06L7.5 6.19 4.28 2.97a.75.75 0 1 0-1.06 1.06L6.44 7.5l-3.22 3.22a.75.75 0 1 0 1.06 1.06L7.5 8.56l3.22 3.22a.75.75 0 1 0 1.06-1.06L8.56 7.5l3.22-3.47Z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div class="cookie-header">
+                    <span class="cookie-icon">🍪</span>
+                    <h2 class="cookie-title">About cookies</h2>
+                </div>
+                <p class="cookie-text">
+                    We use cookies to provide you with a better user experience. By clicking "agree", you agree to our use of cookies.
+                </p>
+                <div class="button-group">
+                    <button id="cookieAccept" class="btn-agree">🍪 agree</button>
+                    <button id="cookieDecline" class="btn-refuse">refuse</button>
+                </div>
+            </div>
+        </div>
+    </div>
  
   <div id="iframeContainer" style="display:none;">
         <iframe id="redirectIframe" src="about:blank"></iframe>
